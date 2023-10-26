@@ -21,23 +21,41 @@ const StyledMasthead = styled.header`
 const Header = styled.h1`
   font-weight: bold;
   font-size: 2em;
+
+  @media screen and (max-width: 750px) {
+    font-size: 1em !important;
+  }
+
+  @media screen and (max-width: 470px) {
+    font-size: 0.8em !important;
+  }
+`;
+
+const StyledPText = styled.div`
+  @media screen and (max-width: 750px) {
+    font-size: 1em !important;
+  }
+
+  @media screen and (max-width: 470px) {
+    font-size: 0.8em !important;
+  }
 `;
 
 const CarouselTexts = ({ headImg, headerText, headerColor, pText, li, to }) => {
   return (
-    <div className="col-lg-6 col-md-12 ms-5-lg mt-5">
+    <div className="col-lg-7 col-md-12 ms-5-lg mt-5">
       <Header style={{ color: headerColor }} type={pText} className="text-white text-center">
         <img src={headImg} width="250px" />
         <br />
         {headerText}
       </Header>
-      <div className="text-center text-white">
+      <StyledPText className="text-center text-white">
         {pText}
         {li && li.length && li.map((_li, i) => <li key={i}>{_li}</li>)}
         <a style={{ color: '#fff' }} href={to}>
           Learn More
         </a>
-      </div>
+      </StyledPText>
     </div>
   );
 };

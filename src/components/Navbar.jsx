@@ -47,6 +47,14 @@ const StyledLinkComp = ({ to, setExpanded, children, pathname }) => {
   );
 };
 
+const Logo = styled.img`
+  width: 250px;
+
+  @media screen and (max-width: 400px) {
+    width: 160px !important;
+  }
+`
+
 function NavBar({ expanded, setExpanded }) {
   const navigate = useNavigate();
 
@@ -54,7 +62,7 @@ function NavBar({ expanded, setExpanded }) {
     <StyledNavbar expanded={expanded} expand="md" className="bg-body-tertiary me-5 w-100 text-center position-fixed">
       <Container fluid>
         <Navbar.Brand style={{ cursor: 'pointer' }} onClick={() => navigate('/', { replace: true })} className="ms-5">
-          <img style={{ width: '250px' }} src="/safedash-logo.png" />
+          <Logo  src="/safedash-logo.png" />
         </Navbar.Brand>
         <Navbar.Toggle onClick={() => setExpanded((expanded) => (expanded ? false : 'expanded'))} />
         <Navbar.Collapse id="navbarScroll">
