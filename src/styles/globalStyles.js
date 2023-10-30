@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body {
+  background-color: aliceblue;
   font-family: 'Roboto', sans-serif;
 }
 

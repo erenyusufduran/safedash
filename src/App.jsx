@@ -3,6 +3,8 @@ import Slider from './components/Slider';
 import Navbar from './components/Navbar';
 import { useState } from 'react';
 import TextComponents from './components/TextComponents';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   const [expanded, setExpanded] = useState();
@@ -22,6 +24,8 @@ function App() {
         </div>
         <Slider />
         <TextComponents />
+        <About />
+        <Contact />
       </main>
     </>
   );

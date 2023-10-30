@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { FaAngleRight } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const StyledMasthead = styled.header`
@@ -53,7 +54,7 @@ const CarouselTexts = ({ headImg, headerText, headerColor, pText, li, to }) => {
         {pText}
         {li && li.length && li.map((_li, i) => <li key={i}>{_li}</li>)}
         <a style={{ color: '#fff' }} href={to}>
-          Learn More
+          Learn More <FaAngleRight />
         </a>
       </StyledPText>
     </div>
