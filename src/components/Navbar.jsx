@@ -5,7 +5,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
 
 const StyledForm = styled(Form)`
   @media screen and (max-width: 768px) {
@@ -25,25 +24,28 @@ const NavItems = styled.button`
   border: none;
   font-weight: bold;
   background-color: transparent;
-  transition: 0.4s ease-in;
 
-  &:hover {
-    color: red !important;
+  a {
+    transition: 0.2s ease-in;
+
+    &:hover {
+      color: #33638f !important;
+    }
   }
 `;
 
 const StyledLinkComp = ({ to, setExpanded, children, pathname }) => {
-  const navigate = useNavigate();
-
   return (
-    <Nav.Link
+    <NavItems
       onClick={() => {
-        navigate(to, { replace: true });
         setExpanded(false);
       }}
+      type={pathname}
     >
-      <NavItems type={pathname}>{children}</NavItems>
-    </Nav.Link>
+      <a style={{ textDecoration: 'none', color: '#000' }} href={to}>
+        {children}
+      </a>
+    </NavItems>
   );
 };
 
@@ -53,32 +55,30 @@ const Logo = styled.img`
   @media screen and (max-width: 400px) {
     width: 160px !important;
   }
-`
+`;
 
 function NavBar({ expanded, setExpanded }) {
-  const navigate = useNavigate();
-
   return (
     <StyledNavbar expanded={expanded} expand="md" className="bg-body-tertiary me-5 w-100 text-center position-fixed">
       <Container fluid>
-        <Navbar.Brand style={{ cursor: 'pointer' }} onClick={() => navigate('/', { replace: true })} className="ms-5">
-          <Logo  src="/safedash-logo.png" />
+        <Navbar.Brand style={{ cursor: 'pointer' }} href="#home" className="ms-5">
+          <Logo src="/safedash-logo.png" />
         </Navbar.Brand>
         <Navbar.Toggle onClick={() => setExpanded((expanded) => (expanded ? false : 'expanded'))} />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 " navbarScroll></Nav>
 
           <StyledForm className="d-flex me-5 gap-5 justify-content-center">
-            <StyledLinkComp to="/" setExpanded={setExpanded}>
+            <StyledLinkComp to="#home" setExpanded={setExpanded}>
               Home
             </StyledLinkComp>
-            <StyledLinkComp to="/product" setExpanded={setExpanded}>
+            <StyledLinkComp to="#product" setExpanded={setExpanded}>
               Product
             </StyledLinkComp>
-            <StyledLinkComp to="/about" setExpanded={setExpanded}>
+            <StyledLinkComp to="#about" setExpanded={setExpanded}>
               About
             </StyledLinkComp>
-            <StyledLinkComp to="/contact" setExpanded={setExpanded}>
+            <StyledLinkComp to="#contact" setExpanded={setExpanded}>
               Contact
             </StyledLinkComp>
           </StyledForm>

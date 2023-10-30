@@ -1,30 +1,29 @@
-import { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import PageNotFound from './pages/PageNotFound';
-import Spinner from './components/Spinner';
-
-const AppLayout = lazy(() => import('./pages/AppLayout'));
-const Home = lazy(() => import('./pages/Home'));
-const Product = lazy(() => import('./pages/Product'));
-const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Home'));
+import GlobalStyles from './styles/globalStyles';
+import Slider from './components/Slider';
+import Navbar from './components/Navbar';
+import { useState } from 'react';
+import TextComponents from './components/TextComponents';
 
 function App() {
+  const [expanded, setExpanded] = useState();
+
   return (
-    <BrowserRouter>
-      <Suspense fallback={<Spinner />}>
-        <Routes>
-          <Route element={<AppLayout />}>
-            <Route index element={<Home />} />
-            <Route path="product" element={<Product />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-          </Route>
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <>
+      <GlobalStyles />
+      <Navbar expanded={expanded} setExpanded={setExpanded} />
+      <main onClick={() => setExpanded(false)}>
+        <div id="home">
+          <h1 style={{ paddingTop: '120px', textAlign: 'center', fontWeight: 'bold', fontSize: '3em' }}>Welcome to Safedash!</h1>
+          <hr style={{ width: '40%', margin: '0 auto', height: '6px' }} />
+          <p style={{ width: '70%', margin: '20px auto', textAlign: 'center', fontSize: '1.2em' }}>
+            At Safedash, we are committed to fortifying your digital landscape against a myriad of cyber threats. Our two flagship products, <b>CastDDoS</b> and <b>CASTLOAD</b>, are tailored to ensure
+            that your business remains resilient, adaptable, and ever-evolving in the face of growing digital challenges.
+          </p>
+        </div>
+        <Slider />
+        <TextComponents />
+      </main>
+    </>
   );
 }
 

@@ -18,7 +18,7 @@ const imageData = [
     ],
     headImg: '/cast-ddos.png',
     bgImg: "pen-test-orj.jpg",
-    to: '',
+    to: '#cast-ddos',
   },
   {
     headerText: "CASTLOAD: Strengthen Your System's Fortitude",
@@ -33,7 +33,7 @@ const imageData = [
     ],
     headImg: '/cast-load.png',
     bgImg: "image-orj.jpg",
-    to: '',
+    to: '#cast-load',
   },
   {
     headerText: 'CASTPEN: Secure Your Cloud Horizon',
@@ -48,7 +48,7 @@ const imageData = [
     ],
     headImg: '/cast-pen.png',
     bgImg: "vision-orj.jpg",
-    to: '',
+    to: '#cast-pen',
   },
 ];
 

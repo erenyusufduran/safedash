@@ -43,9 +43,9 @@ const StyledPText = styled.div`
 
 const CarouselTexts = ({ headImg, headerText, headerColor, pText, li, to }) => {
   return (
-    <div className="col-lg-7 col-md-12 ms-5-lg mt-5">
+    <div className="col-lg-7 col-md-12 ms-5-lg my-auto">
       <Header style={{ color: headerColor }} type={pText} className="text-white text-center">
-        <img src={headImg} width="250px" />
+        <img src={headImg} width="350px" />
         <br />
         {headerText}
       </Header>
