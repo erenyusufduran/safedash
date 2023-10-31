@@ -3,8 +3,20 @@ import Slider from './components/Slider';
 import Navbar from './components/Navbar';
 import { useState } from 'react';
 import TextComponents from './components/TextComponents';
-import About from './components/About';
+// import About from './components/About';
 import Contact from './components/Contact';
+import styled from 'styled-components';
+
+const ContainerDiv = styled.div`
+  margin: 0 auto;
+  width: 80%;
+  background-color: #fff;
+  padding: 3px 25px;
+
+  @media screen and (max-width: 1450px) {
+    width: 100%;
+  }
+`;
 
 function App() {
   const [expanded, setExpanded] = useState();
@@ -23,9 +35,11 @@ function App() {
           </p>
         </div>
         <Slider />
-        <TextComponents />
-        <About />
-        <Contact />
+        <ContainerDiv id="product">
+          <TextComponents />
+          {/* <About /> */}
+          <Contact />
+        </ContainerDiv>
       </main>
     </>
   );

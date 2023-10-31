@@ -1,0 +1,135 @@
+.app__contact {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.app__contact-cards {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.app__contact-card {
+  min-width: 290px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #fef4f5;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 25px #fef4f5;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 100%;
+  }
+}
+
+.contact_img {
+  width: 40px;
+  height: 40px;
+  margin: 0 0.7rem;
+}
+
+.contact_p {
+  font-weight: 500;
+}
+
+.contact_a {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+.app__contact-cards .app__contact-card:last-child {
+  background-color: #f2f7fb;
+}
+
+.app__contact-cards .app__contact-card:last-child:hover {
+  box-shadow: 0 0 25px #f2f7fb;
+}
+
+.app__contact-form {
+  width: 60%;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+.contact_form_div {
+  width: 100%;
+  margin: 0.75rem 0;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 25px var(--primary-color);
+  }
+}
+
+.contact_input,
+.contact_textarea {
+  width: 100%;
+  padding: 0.95rem;
+  border: none;
+  border-radius: 7px;
+  background-color: #d7d7db;
+
+  font-family: var(--font-base);
+  color: var(--secondary-color);
+  outline: none;
+}
+
+.contact_textarea {
+  height: 170px;
+}
+
+.contact_button {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #2430af;
+  color: #d7d7db;
+
+  font-weight: 500;
+  outline: none;
+  margin: 2rem 0 0 0;
+  font-family: var(--font-base);
+  transition: 0.6s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border: 1px solid #2430af;
+  }
+}

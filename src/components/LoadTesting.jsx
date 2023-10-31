@@ -1,10 +1,10 @@
-import { StyledImg } from '../ui/StyledImg';
+import { HeadImg, StyledImg } from '../ui/StyledImg';
 
 const LoadTesting = () => {
   return (
     <div id="cast-load" className="my-5 text-center">
       <h3>
-        <img src="/cast-load.png" width="500px" />
+        <HeadImg src="/cast-load.png" />
       </h3>
       <h4 className="fw-bold">Elevate Your System&apos;s Performance with CASTLOAD</h4>
       <p>
@@ -12,7 +12,7 @@ const LoadTesting = () => {
         system&apos;s fortitude, ensuring it&apos;s geared up for the challenges of an expanding user community.
       </p>
       <div className="row mt-5">
-        <div className="col-6 my-auto" style={{ fontSize: '.85em' }}>
+        <div className="col-lg-6 col-md-12 my-auto" style={{ fontSize: '.85em' }}>
           <div>
             <h3>Why Invest in Load Testing?</h3>
           </div>
@@ -37,16 +37,16 @@ const LoadTesting = () => {
             </li>
           </div>
         </div>
-        <div className="col-6 my-auto">
+        <div className="col-lg-6 col-md-12 my-auto mt-md-3 mt-3">
           <StyledImg src="/load-testingsa.jpg" alt="" />
         </div>
       </div>
 
-      <div className="row mt-5">
-        <div className="col-6 my-auto">
+      <div className="row flex-lg-row flex-column-reverse mt-5">
+        <div className="col-lg-6 col-md-12 my-auto mt-md-4 mt-3">
           <StyledImg src="/loading-test.png" alt="" />
         </div>
-        <div className="col-6">
+        <div className="col-lg-6 col-md-12">
           <div>
             <h3 className="fw-bold" style={{ fontSize: '2em' }}>
               Why CASTLOAD?
@@ -75,11 +75,11 @@ const LoadTesting = () => {
             </div>
           </div>
         </div>
-        <p className="text-center fw-bold mt-5" style={{ fontSize: '1.1em' }}>
-          Don&apos;t let unexpected traffic surges be your system&apos;s downfall. Engage with us today to schedule a load test with CASTLOAD. Fortify your platform&apos;s performance, ensuring
-          agility and dependability always remain in the spotlight.
-        </p>
       </div>
+      <p className="text-center fw-bold mt-5" style={{ fontSize: '1.1em' }}>
+        Don&apos;t let unexpected traffic surges be your system&apos;s downfall. Engage with us today to schedule a load test with CASTLOAD. Fortify your platform&apos;s performance, ensuring agility
+        and dependability always remain in the spotlight.
+      </p>
     </div>
   );
 };

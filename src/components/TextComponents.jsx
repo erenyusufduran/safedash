@@ -47,12 +47,13 @@ import PenTesting from './PenTesting';
 
 const TextComponents = () => {
   return (
-    <div id="product" style={{ margin: '0 auto', width: '80%', backgroundColor: "#fff", padding: "3px 25px" }}>
+    <div className='mb-5'>
       <DdosTesting />
       <hr />
       <LoadTesting />
       <hr />
       <PenTesting />
+      <hr />
     </div>
   );
 };

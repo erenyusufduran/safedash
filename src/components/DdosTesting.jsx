@@ -1,10 +1,10 @@
-import { StyledImg } from '../ui/StyledImg';
+import { HeadImg, StyledImg } from '../ui/StyledImg';
 
 const DdosTesting = () => {
   return (
     <div id="cast-ddos" className="my-3 text-center">
       <h3>
-        <img src="/cast-ddos.png" width="500px" />
+        <HeadImg src="/cast-ddos.png" />
       </h3>
       <h4 className="fw-bold">Gain Peace of Mind Knowing Your Digital Assets Can Withstand Even the Toughest DDoS Attacks</h4>
       <p>
@@ -12,11 +12,11 @@ const DdosTesting = () => {
         simulating real-life DDoS attacks, challenging your defense mechanisms, and identifying vulnerabilities.
       </p>
       <div className="row mt-5">
-        <div className="col-6 my-auto">
+        <div className="col-lg-6 col-md-12 mb-md-3 mb-3 my-auto">
           <StyledImg src="/ddos-attack.jpg" alt="" />
         </div>
 
-        <div className="col-6" style={{ fontSize: '.95em' }}>
+        <div className="col-lg-6 col-md-12 mt-md-2" style={{ fontSize: '.95em' }}>
           <div>
             <h3>Why Invest in DDoS Testing?</h3>
           </div>

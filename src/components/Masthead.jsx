@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { FaAngleRight } from 'react-icons/fa';
 import styled from 'styled-components';
+import { HeadImg } from '../ui/StyledImg';
 
 const StyledMasthead = styled.header`
   height: 60vh;
@@ -10,7 +11,7 @@ const StyledMasthead = styled.header`
   background-image: ${(props) => props.type && `linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),url(${props.type})`};
   background-color: ${(props) => props.bgcolor && props.bgcolor};
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1400px) {
     background-position: right;
   }
 
@@ -46,7 +47,7 @@ const CarouselTexts = ({ headImg, headerText, headerColor, pText, li, to }) => {
   return (
     <div className="col-lg-7 col-md-12 ms-5-lg my-auto">
       <Header style={{ color: headerColor }} type={pText} className="text-white text-center">
-        <img src={headImg} width="350px" />
+        <HeadImg src={headImg} />
         <br />
         {headerText}
       </Header>
@@ -66,7 +67,7 @@ const Masthead = ({ headerText, headerColor, pText, li, headImg, img, bgcolor, t
     <>
       <StyledMasthead type={img} bgcolor={bgcolor}>
         <div className="container h-100">
-          <div className="row h-100 align-items-center text-md-center">
+          <div className="row h-100 align-items-center text-md-center text-lg-start">
             <CarouselTexts headImg={headImg} li={li} headerText={headerText} headerColor={headerColor} pText={pText} to={to} />
           </div>
         </div>
