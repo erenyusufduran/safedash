@@ -17,7 +17,7 @@ const imageData = [
       'Gain Confidence against looming DDoS threats.',
     ],
     headImg: '/cast-ddos.png',
-    bgImg: "pen-test-orj.jpg",
+    bgImg: "ddos1.jpg",
     to: '#cast-ddos',
   },
   {
@@ -47,7 +47,7 @@ const imageData = [
       'Provide Expert Guidance, keeping you ahead in your security journey.',
     ],
     headImg: '/cast-pen.png',
-    bgImg: "vision-orj.jpg",
+    bgImg: "castpen1.jpg",
     to: '#cast-pen',
   },
 ];
@@ -61,7 +61,7 @@ const SButton = styled.button`
   border-radius: 50%;
   color: #fff;
   font-size: 1em;
-  padding: 0 10px 6px 10px;
+  padding: 3px 8px 3px 8px;
   cursor: pointer;
 
   &:hover {
