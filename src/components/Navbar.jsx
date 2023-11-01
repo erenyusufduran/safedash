@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { NavDropdown } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
@@ -16,38 +17,49 @@ const StyledForm = styled(Form)`
 
 const StyledNavbar = styled(Navbar)`
   z-index: 1000;
+  background-color: rgba(215, 222, 220, 0.6);
+
+  @media screen and (max-width: 768px) {
+  background-color: rgb(215, 222, 220);
+    
+  }
 `;
 
-const NavItems = styled.button`
+const NavItems = styled.a`
   padding: 8px 8px;
   border-radius: 5px;
   border: none;
   font-weight: bold;
   background-color: transparent;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+  color: #000;
 
-  a {
-    transition: 0.2s ease-in;
-
-    &:hover {
-      color: #33638f !important;
-    }
+  &:hover {
+    color: #33638f !important;
   }
 `;
 
-const StyledLinkComp = ({ to, setExpanded, children, pathname }) => {
+const StyledLinkComp = ({ to, setExpanded, children }) => {
   return (
     <NavItems
+      href={to}
       onClick={() => {
         setExpanded(false);
       }}
-      type={pathname}
     >
-      <a style={{ textDecoration: 'none', color: '#000' }} href={to}>
-        {children}
-      </a>
+      {children}
     </NavItems>
   );
 };
+
+const StyledNavDropdown = styled(NavDropdown)`
+  padding: 8px 8px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  background-color: transparent;
+`;
 
 const Logo = styled.img`
   width: 250px;
@@ -59,22 +71,32 @@ const Logo = styled.img`
 
 function NavBar({ expanded, setExpanded }) {
   return (
-    <StyledNavbar style={{backgroundColor: "#d7dedc"}} expanded={expanded} expand="md" className="me-5 w-100 text-center position-fixed">
+    <StyledNavbar expanded={expanded} expand="md" className="me-5 w-100 text-center position-fixed">
       <Container fluid>
         <Navbar.Brand style={{ cursor: 'pointer' }} href="#home" className="ms-5">
           <Logo src="/safedash-logo.png" />
         </Navbar.Brand>
         <Navbar.Toggle onClick={() => setExpanded((expanded) => (expanded ? false : 'expanded'))} />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 " navbarScroll></Nav>
+          <Nav className="me-auto my-2 d-sm-none" navbarScroll></Nav>
 
           <StyledForm className="d-flex me-5 gap-5 justify-content-center">
             <StyledLinkComp to="#home" setExpanded={setExpanded}>
               Home
             </StyledLinkComp>
-            <StyledLinkComp to="#product" setExpanded={setExpanded}>
-              Product
-            </StyledLinkComp>
+
+            <StyledNavDropdown drop="down" title="Products">
+              <NavDropdown.Item href="#cast-ddos">CastDDOS</NavDropdown.Item>
+              <NavDropdown.Item href="#cast-load">CastLOAD</NavDropdown.Item>
+              <NavDropdown.Item href="#cast-pen">CastPEN</NavDropdown.Item>
+              <NavDropdown.Item disabled={true} href="#cast-ddos">
+                CastDASH
+              </NavDropdown.Item>
+              <NavDropdown.Item disabled={true} href="#cast-ddos">
+                CastAI
+              </NavDropdown.Item>
+            </StyledNavDropdown>
+
             <StyledLinkComp to="#about" setExpanded={setExpanded}>
               About
             </StyledLinkComp>

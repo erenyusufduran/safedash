@@ -2,7 +2,7 @@ import { HeadImg, StyledImg } from '../ui/StyledImg';
 
 const DdosTesting = () => {
   return (
-    <div className="my-3 text-center">
+    <div id="cast-ddos" className="my-3 text-center">
       <h3>
         <HeadImg src="/cast-ddos.png" />
       </h3>
@@ -41,7 +41,7 @@ const DdosTesting = () => {
         </div>
       </div>
 
-      <div id="cast-ddos" className="row mt-5">
+      <div className="row mt-5">
         <div>
           <h3 className="fw-bold" style={{ fontSize: '2em' }}>
             Why CastDDoS?

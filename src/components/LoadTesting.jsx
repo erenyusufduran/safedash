@@ -2,7 +2,7 @@ import { HeadImg, StyledImg } from '../ui/StyledImg';
 
 const LoadTesting = () => {
   return (
-    <div className="my-5 text-center">
+    <div id="cast-load" className="my-5 text-center">
       <h3>
         <HeadImg src="/cast-load.png" />
       </h3>
@@ -42,7 +42,7 @@ const LoadTesting = () => {
         </div>
       </div>
 
-      <div id="cast-load" className="row flex-lg-row flex-column-reverse mt-5">
+      <div className="row flex-lg-row flex-column-reverse mt-5">
         <div className="col-lg-6 col-md-12 my-auto mt-md-4 mt-3">
           <StyledImg src="/loading-test.png" alt="" />
         </div>
