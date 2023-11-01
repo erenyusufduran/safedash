@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import TextComponents from './components/TextComponents';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-// import About from './components/About';
+import About from './components/About';
 
 const ContainerDiv = styled.div`
   margin: 0 auto;
@@ -38,7 +38,7 @@ function App() {
         <Slider />
         <ContainerDiv id="product">
           <TextComponents />
-          {/* <About /> */}
+          <About />
           <Contact />
         </ContainerDiv>
       </main>
