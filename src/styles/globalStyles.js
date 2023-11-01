@@ -1,6 +1,22 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+
+@font-face {
+  font-family: Light;
+  src: local("Gilroy-Light"), url("/Gilroy-Light.otf") format("otf");
+}
+
+@font-face {
+  font-family: Medium;
+  src: local("Gilroy-Medium"), url("/Gilroy-Medium.otf") format("otf");
+}
+
+@font-face {
+  font-family: Bold;
+  src: local("Gilroy-Bold"), url("/Gilroy-Bold.otf") format("otf");
+}
+
 :root {
   line-height: 1.5;
   font-weight: 400;
@@ -14,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
 
 body {
   background-color: #d7dedc;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Medium', sans-serif;
 }
 
 * {

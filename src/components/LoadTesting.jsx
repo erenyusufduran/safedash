@@ -38,15 +38,15 @@ const LoadTesting = () => {
           </div>
         </div>
         <div className="col-lg-6 col-md-12 my-auto mt-md-3 mt-3">
-          <StyledImg src="/load-img.png" alt="" />
+          <StyledImg src="/load-----.png" alt="" />
         </div>
       </div>
 
       <div className="row flex-lg-row flex-column-reverse mt-5">
         <div className="col-lg-6 col-md-12 my-auto mt-md-4 mt-3">
-          <StyledImg src="/loading-test.png" alt="" />
+          <StyledImg src="/load-.png" alt="" />
         </div>
-        <div className="col-lg-6 col-md-12">
+        <div className="col-lg-6 col-md-12 my-auto">
           <div>
             <h3 className="fw-bold" style={{ fontSize: '2em' }}>
               Why CASTLOAD?

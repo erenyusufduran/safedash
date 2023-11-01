@@ -13,7 +13,7 @@ const DdosTesting = () => {
       </p>
       <div className="row mt-5">
         <div className="col-lg-6 col-md-12 mb-md-3 mb-3 my-auto">
-          <StyledImg src="/ddos-attack.jpg" alt="" />
+          <StyledImg src="/ddos----.png" alt="" />
         </div>
 
         <div className="col-lg-6 col-md-12 mt-md-2" style={{ fontSize: '.95em' }}>

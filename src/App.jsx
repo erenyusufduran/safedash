@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import About from './components/About';
 
+
 const ContainerDiv = styled.div`
   margin: 0 auto;
   width: 80%;
