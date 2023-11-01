@@ -20,8 +20,7 @@ const StyledNavbar = styled(Navbar)`
   background-color: rgba(215, 222, 220, 0.6);
 
   @media screen and (max-width: 768px) {
-  background-color: rgb(215, 222, 220);
-    
+  background-color: rgba(215, 222, 220, 0.8);
   }
 `;
 
@@ -86,9 +85,9 @@ function NavBar({ expanded, setExpanded }) {
             </StyledLinkComp>
 
             <StyledNavDropdown drop="down" title="Products">
-              <NavDropdown.Item href="#cast-ddos">CastDDOS</NavDropdown.Item>
-              <NavDropdown.Item href="#cast-load">CastLOAD</NavDropdown.Item>
-              <NavDropdown.Item href="#cast-pen">CastPEN</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-ddos">CastDDOS</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-load">CastLOAD</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-pen">CastPEN</NavDropdown.Item>
               <NavDropdown.Item disabled={true} href="#cast-ddos">
                 CastDASH
               </NavDropdown.Item>
