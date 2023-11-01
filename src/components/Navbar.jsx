@@ -116,12 +116,12 @@ function NavBar({ expanded, setExpanded }) {
                 <NavDropdown.Divider />
 
                 <NavDropdown.Item disabled={true} href="#cast-ddos">
-                  CastDASH
+                  CastDASH (IN Progress)
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
 
                 <NavDropdown.Item disabled={true} href="#cast-ddos">
-                  CastAI
+                  CastAI (IN Progress)
                 </NavDropdown.Item>
               </StyledNavDropdown>
             </MobileNoneDiv>
