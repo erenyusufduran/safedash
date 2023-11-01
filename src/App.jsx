@@ -1,11 +1,12 @@
+import { useState } from 'react';
+import styled from 'styled-components';
 import GlobalStyles from './styles/globalStyles';
 import Slider from './components/Slider';
 import Navbar from './components/Navbar';
-import { useState } from 'react';
 import TextComponents from './components/TextComponents';
-// import About from './components/About';
 import Contact from './components/Contact';
-import styled from 'styled-components';
+import Footer from './components/Footer';
+// import About from './components/About';
 
 const ContainerDiv = styled.div`
   margin: 0 auto;
@@ -41,6 +42,7 @@ function App() {
           <Contact />
         </ContainerDiv>
       </main>
+      <Footer onClick={() => setExpanded(false)} />
     </>
   );
 }

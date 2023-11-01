@@ -38,7 +38,7 @@ const LoadTesting = () => {
           </div>
         </div>
         <div className="col-lg-6 col-md-12 my-auto mt-md-3 mt-3">
-          <StyledImg src="/load-testingsa.jpg" alt="" />
+          <StyledImg src="/load-img.png" alt="" />
         </div>
       </div>
 
