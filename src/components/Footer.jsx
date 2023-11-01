@@ -34,7 +34,7 @@ const Address = styled.div`
 
 const Footer = ({ onClick }) => {
   return (
-    <footer onClick={onClick} className="text-center text-lg-start mt-5 mb-5" style={{ backgroundColor: 'aliceblue' }}>
+    <footer onClick={onClick} className="text-center text-lg-start mt-5 mb-5" style={{ backgroundColor: '#d7dedc' }}>
       <div className="text-center mx-auto row">
         <Img className="col-md-3 col-sm-12 mx-auto" src="/safedash-logo.png" />
         <StyledA className="col-md-3 col-sm-12 mx-auto my-auto" href="mailto:support@safedash.co.uk">

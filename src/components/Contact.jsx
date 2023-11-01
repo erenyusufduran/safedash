@@ -44,7 +44,7 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className="text-center pb-3">
+    <div id='contact' className="text-center pb-3 mt-5">
       <h2 className="head-text text-center fw-bold">
         <span>Contact</span> with US!
       </h2>

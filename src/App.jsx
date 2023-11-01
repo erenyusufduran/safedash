@@ -39,6 +39,7 @@ function App() {
         <ContainerDiv id="product">
           <TextComponents />
           <About />
+          <hr />
           <Contact />
         </ContainerDiv>
       </main>

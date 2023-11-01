@@ -59,7 +59,7 @@ const Logo = styled.img`
 
 function NavBar({ expanded, setExpanded }) {
   return (
-    <StyledNavbar expanded={expanded} expand="md" className="bg-body-tertiary me-5 w-100 text-center position-fixed">
+    <StyledNavbar style={{backgroundColor: "#d7dedc"}} expanded={expanded} expand="md" className="me-5 w-100 text-center position-fixed">
       <Container fluid>
         <Navbar.Brand style={{ cursor: 'pointer' }} href="#home" className="ms-5">
           <Logo src="/safedash-logo.png" />

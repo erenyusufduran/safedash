@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body {
-  background-color: aliceblue;
+  background-color: #d7dedc;
   font-family: 'Poppins', sans-serif;
 }
 
