@@ -20,7 +20,7 @@ const StyledNavbar = styled(Navbar)`
   background-color: rgba(215, 222, 220, 0.6);
 
   @media screen and (max-width: 768px) {
-  background-color: rgba(215, 222, 220, 0.8);
+    background-color: rgba(215, 222, 220, 0.8);
   }
 `;
 
@@ -52,6 +52,21 @@ const StyledLinkComp = ({ to, setExpanded, children }) => {
   );
 };
 
+const MobileNav = styled(Nav)`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+const MobileNoneDiv = styled.div`
+  display: block;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
 const StyledNavDropdown = styled(NavDropdown)`
   padding: 8px 8px;
   border-radius: 5px;
@@ -77,25 +92,66 @@ function NavBar({ expanded, setExpanded }) {
         </Navbar.Brand>
         <Navbar.Toggle onClick={() => setExpanded((expanded) => (expanded ? false : 'expanded'))} />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 d-sm-none" navbarScroll></Nav>
+          <Nav className="me-auto my-2" navbarScroll></Nav>
 
           <StyledForm className="d-flex me-5 gap-5 justify-content-center">
             <StyledLinkComp to="#home" setExpanded={setExpanded}>
               Home
             </StyledLinkComp>
+            <MobileNoneDiv>
+              <StyledNavDropdown drop="down" title="Products">
+                <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-ddos">
+                  CastDDOS
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
 
-            <StyledNavDropdown drop="down" title="Products">
-              <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-ddos">CastDDOS</NavDropdown.Item>
-              <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-load">CastLOAD</NavDropdown.Item>
-              <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-pen">CastPEN</NavDropdown.Item>
-              <NavDropdown.Item disabled={true} href="#cast-ddos">
-                CastDASH
-              </NavDropdown.Item>
-              <NavDropdown.Item disabled={true} href="#cast-ddos">
-                CastAI
-              </NavDropdown.Item>
-            </StyledNavDropdown>
+                <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-load">
+                  CastLOAD
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
 
+                <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-pen">
+                  CastPEN
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+
+                <NavDropdown.Item disabled={true} href="#cast-ddos">
+                  CastDASH
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+
+                <NavDropdown.Item disabled={true} href="#cast-ddos">
+                  CastAI
+                </NavDropdown.Item>
+              </StyledNavDropdown>
+            </MobileNoneDiv>
+            <MobileNav navbarScroll style={{ maxHeight: '280px' }}>
+              <StyledNavDropdown drop="down" title="Products">
+                <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-ddos">
+                  CastDDOS
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+
+                <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-load">
+                  CastLOAD
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+
+                <NavDropdown.Item onClick={() => setExpanded(false)} href="#cast-pen">
+                  CastPEN
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+
+                <NavDropdown.Item disabled={true} href="#cast-ddos">
+                  CastDASH
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+
+                <NavDropdown.Item disabled={true} href="#cast-ddos">
+                  CastAI
+                </NavDropdown.Item>
+              </StyledNavDropdown>
+            </MobileNav>
             <StyledLinkComp to="#about" setExpanded={setExpanded}>
               About
             </StyledLinkComp>
