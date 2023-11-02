@@ -7,9 +7,9 @@ import Masthead from './Masthead';
 
 const imageData = [
   {
-    headerText: 'CastDDoS: Fortify Against Digital Onslaughts',
+    headerText: 'CastDDOS: Fortify Against Digital Onslaughts',
     headerColor: '#fff',
-    pText: 'Are DDoS attacks a concern? Let CastDDoS be your shield. We simulate real DDoS attacks to test your defenses, helping you:',
+    pText: 'Are DDoS attacks a concern? Let CastDDOS be your shield. We simulate real DDoS attacks to test your defenses, helping you:',
     li: [
       'Identify Weaknesses in your network and applications.',
       'Fortify Defenses with real-world attack simulations.',
@@ -21,9 +21,9 @@ const imageData = [
     to: '#cast-ddos',
   },
   {
-    headerText: "CASTLOAD: Strengthen Your System's Fortitude",
+    headerText: "CastLOAD: Strengthen Your System's Fortitude",
     headerColor: '#000',
-    pText: 'Is your platform primed for peak performance? Dive into resilience with CASTLOAD. Our premier load testing approach:',
+    pText: 'Is your platform primed for peak performance? Dive into resilience with CastLOAD. Our premier load testing approach:',
     li: [
       'Detects Bottlenecks hindering your efficiency.',
       'Enhances Capacity for the challenges of escalating traffic.',
@@ -36,9 +36,9 @@ const imageData = [
     to: '#cast-load',
   },
   {
-    headerText: 'CASTPEN: Secure Your Cloud Horizon',
+    headerText: 'CastPEN: Secure Your Cloud Horizon',
     headerColor: '#000',
-    pText: 'Concerned about cloud security vulnerabilities? Let CASTPEN be your beacon. We dive deep into your cloud setup to:',
+    pText: 'Concerned about cloud security vulnerabilities? Let CastPEN be your beacon. We dive deep into your cloud setup to:',
     li: [
       'Analyze Holistically from configurations to databases.',
       'Refine Defenses with sophisticated cyber-attack simulations.',

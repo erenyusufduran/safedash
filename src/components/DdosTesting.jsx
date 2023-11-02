@@ -44,13 +44,13 @@ const DdosTesting = () => {
       <div className="row mt-5">
         <div>
           <h3 className="fw-bold" style={{ fontSize: '2em' }}>
-            Why CastDDoS?
+            Why CastDDOS?
           </h3>
         </div>
         <div className="text-start">
           <i>
             <p className="text-center">
-              In an ever-evolving digital landscape, the right defense against DDoS attacks is not just about prevention but also adaptability and comprehensive insights. Enter CastDDoS — your
+              In an ever-evolving digital landscape, the right defense against DDoS attacks is not just about prevention but also adaptability and comprehensive insights. Enter CastDDOS — your
               advanced shield in the world of cyber threats.
             </p>
           </i>
@@ -80,7 +80,7 @@ const DdosTesting = () => {
           </div>
         </div>
         <p className="text-center fw-bold mt-4" style={{ fontSize: '1.1em' }}>
-          Don&apos;t wait until a DDoS attack disrupts your operations. Reach out to us today to schedule a DDoS test and strengthen your defense against cyber threats. At CastDDoS, your security is
+          Don&apos;t wait until a DDoS attack disrupts your operations. Reach out to us today to schedule a DDoS test and strengthen your defense against cyber threats. At CastDDOS, your security is
           our utmost priority.
         </p>
       </div>
