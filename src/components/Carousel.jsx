@@ -32,7 +32,7 @@ const imageData = [
       'Offers Tailored Solutions for precise system evaluations.',
     ],
     headImg: '/cast-load.png',
-    bgImg: "image-orj.jpg",
+    bgImg: "loadhead.jpeg",
     to: '#cast-load',
   },
   {

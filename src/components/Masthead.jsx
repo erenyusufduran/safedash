@@ -45,15 +45,29 @@ const StyledPText = styled.div`
 
 const CarouselTexts = ({ headImg, headerText, headerColor, pText, li, to }) => {
   return (
-    <div className="col-lg-7 col-md-12 ms-5-lg my-auto">
-      <Header style={{ color: headerColor }} type={pText} className="text-white text-center">
+    // <div className="col-lg-7 col-md-12 ms-5-lg my-auto">
+    //   <Header style={{ color: headerColor }} type={pText} className="text-white text-center">
+    //     <HeadImg src={headImg} />
+    //     <br />
+    //     {headerText}
+    //   </Header>
+    //   <StyledPText className="text-center text-white">
+    //     {pText}
+    //     {li && li.length && li.map((_li, i) => <li key={i}>{_li}</li>)}
+    //     <a style={{ color: '#fff' }} href={to}>
+    //       Learn More <FaAngleRight />
+    //     </a>
+    //   </StyledPText>
+    // </div>
+    <div className="col-lg-7 col-md-12 ms-5-lg ms-3-sm my-auto">
+      <Header style={{ color: headerColor }} type={pText} className="text-white">
         <HeadImg src={headImg} />
         <br />
         {headerText}
       </Header>
-      <StyledPText className="text-center text-white">
+      <StyledPText className="text-white">
         {pText}
-        {li && li.length && li.map((_li, i) => <li key={i}>{_li}</li>)}
+        {li && li.length && li.map((_li, i) => <li style={{listStyle: "none"}} key={i}>{_li}</li>)}
         <a style={{ color: '#fff' }} href={to}>
           Learn More <FaAngleRight />
         </a>
