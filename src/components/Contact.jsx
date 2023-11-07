@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import '../styles/Contact.css';
 import { TbMailFilled } from 'react-icons/tb';
 import { FaPhoneSquareAlt } from 'react-icons/fa';
@@ -41,15 +41,6 @@ const Contact = () => {
     setIsSended(false);
   };
 
-  useEffect(() => {
-    const timeOut = setTimeout(() => {  
-      setIsSended(false);
-      setBlankField(false);
-    }, [3500])
-
-    return () => clearTimeout(timeOut);
-  }, [setIsSended, setBlankField])
-
   return (
     <div id="contact" className="text-center pb-3 mt-5">
       <h2 className="head-text text-center fw-bold">
@@ -81,8 +72,8 @@ const Contact = () => {
           <div className="contact_form_div">
             <textarea className="contact_textarea p-text" placeholder="Message" value={message} name="message" onChange={handleChangeInput} />
           </div>
-          <p className="contact_p">{blankField ? <p style={{ color: 'red' }}>Fill all the fields.</p> : isSended ? <p  style={{ color: '#2430af' }}>We received your message.</p> : ''}</p>
-          <button disabled={true} className="contact_button p-text" type="submit">
+          <p className="contact_p">{blankField ? <p style={{ color: 'red' }}>Fill all the fields.</p> : isSended ? <p style={{ color: '#2430af' }}>We received your message.</p> : ''}</p>
+          <button disabled={loading} className="contact_button p-text" type="submit">
             {!loading ? 'Send us a message' : 'Sending...'}
           </button>
         </form>
