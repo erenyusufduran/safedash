@@ -1,8 +1,8 @@
-// import { send } from 'emailjs-com';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/Contact.css';
 import { TbMailFilled } from 'react-icons/tb';
 import { FaPhoneSquareAlt } from 'react-icons/fa';
+import { send } from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,24 +13,21 @@ const Contact = () => {
   const [isFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [blankField, setBlankField] = useState(false);
+  const [isSended, setIsSended] = useState(false);
 
-  const { username, email, message } = formData;
+  const { name, email, message } = formData;
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    if (!(username === '' || email === '' || message === '')) {
+    if (!(name === '' || email === '' || message === '')) {
       setLoading(true);
 
-      // send('service_es1y7ur', 'template_hiw8xpr', formData, 'XdAKsxFytxwHq0-oS')
-      //   .then((response) => {
-      //     console.log('SUCCESS!', response.status, response.text);
-      //     setFormData({ username: '', email: '', message: '' });
-      //   })
-      //   .catch((err) => {
-      //     console.error('FAILED!', err);
-      //   });
-      setLoading(false);
+      await send('service_ejb7h85', 'template_0t8p5fj', formData, 'l1kf2bjgWdc-ZetBh');
+      setFormData({ name: '', email: '', message: '' });
+      setIsSended(true);
+
       setBlankField(false);
+      setLoading(false);
     } else {
       console.error('FAILED! You must fill all the blank fields.');
       setBlankField(true);
@@ -41,10 +38,20 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
     setBlankField(false);
+    setIsSended(false);
   };
 
+  useEffect(() => {
+    const timeOut = setTimeout(() => {  
+      setIsSended(false);
+      setBlankField(false);
+    }, [3500])
+
+    return () => clearTimeout(timeOut);
+  }, [setIsSended, setBlankField])
+
   return (
-    <div id='contact' className="text-center pb-3 mt-5">
+    <div id="contact" className="text-center pb-3 mt-5">
       <h2 className="head-text text-center fw-bold">
         <span>Contact</span> with US!
       </h2>
@@ -66,7 +73,7 @@ const Contact = () => {
       {!isFormSubmitted ? (
         <form onSubmit={sendEmail} className="app__contact-form app__flex">
           <div className="contact_form_div app__flex">
-            <input className="contact_input p-text" type="text" placeholder="Name Surname" name="name" value={username} onChange={handleChangeInput} />
+            <input className="contact_input p-text" type="text" placeholder="Name & Surname" name="name" value={name} onChange={handleChangeInput} />
           </div>
           <div className="contact_form_div app__flex">
             <input className="contact_input p-text" type="email" placeholder="Email" name="email" value={email} onChange={handleChangeInput} />
@@ -74,10 +81,8 @@ const Contact = () => {
           <div className="contact_form_div">
             <textarea className="contact_textarea p-text" placeholder="Message" value={message} name="message" onChange={handleChangeInput} />
           </div>
-          <p className="contact_p" style={{ color: 'red' }}>
-            {blankField && 'Fill all the fields.'}
-          </p>
-          <button className="contact_button p-text" type="submit">
+          <p className="contact_p">{blankField ? <p style={{ color: 'red' }}>Fill all the fields.</p> : isSended ? <p  style={{ color: '#2430af' }}>We received your message.</p> : ''}</p>
+          <button disabled={true} className="contact_button p-text" type="submit">
             {!loading ? 'Send us a message' : 'Sending...'}
           </button>
         </form>
